@@ -1,0 +1,31 @@
+POST http://localhost:3003/api/costumer
+content-type: application/json
+
+{
+    "name": "Vinci",
+    "email": "vinci@test.com"
+}
+
+###
+
+POST http://localhost:3003/api/account
+content-type: application/json
+
+{
+    "costumer_id": "a5d7657b-3b59-4485-9d68-27a4cabe31c4"
+}
+
+###
+
+POST http://localhost:3003/api/transaction
+content-type: application/json
+
+{
+    "source_account_id": "ddb010c1-ec46-44de-b66b-0f778d12a717",
+    "destination_account_id": "ec7e6e43-5174-4568-9413-ca2833831925",
+    "amount": 1500
+}
+
+###
+
+GET  http://localhost:3003/api/account/ec7e6e43-5174-4568-9413-ca2833831925/balance
